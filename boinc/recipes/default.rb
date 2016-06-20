@@ -16,6 +16,10 @@ package 'boinc-client' do
   action :install
 end
 
+package 'boinc-client-nvidia-cuda' do
+  action :install
+end
+
 service 'boinc-client' do
   supports :status => true
   action [ :enable, :start ]
