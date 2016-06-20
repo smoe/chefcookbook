@@ -1,32 +1,24 @@
 # boinc Cookbook
 
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook makes your machine contribute to Einstein@Home.
 
 ## Requirements
 
 TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
 ### Platforms
 
-- SandwichOS
+- Debian or Ubuntu
+- Einstein@Home account
 
 ### Chef
 
 - Chef 12.0 or later
 
-### Cookbooks
-
-- `toaster` - boinc needs toaster to brown your bagel.
-
 ## Attributes
 
-TODO: List your cookbook attributes here.
+There are two attributes to consider - one for the project to contribute to and the other for the authorisation code.
 
-e.g.
 ### boinc::default
 
 <table>
@@ -37,10 +29,16 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['boinc']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['boinc']['auth']</tt></td>
+    <td>String</td>
+    <td>Strong or weak authorisation code for Einstein@Home</td>
+    <td><tt>11376_ed6638d7db21cc162e96f75c4e54dd7b</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['boinc']['project']</tt></td>
+    <td>String</td>
+    <td>URL of project to contribute to</td>
+    <td><tt>https://einstein.phys.uwm.edu</tt></td>
   </tr>
 </table>
 
@@ -76,5 +74,5 @@ e.g.
 
 ## License and Authors
 
-Authors: TODO: List authors
+Authors: Steffen Moeller <moeller@debian.org>
 

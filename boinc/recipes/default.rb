@@ -26,5 +26,5 @@ service 'boinc-client' do
 end
 
 execute 'register with Einstein@Home' do
-  command 'boinccmd --project_attach https://einstein.phys.uwm.edu 11376_ed6638d7db21cc162e96f75c4e54dd7b'
+  command "boinccmd --project_attach #{node[:boinc][:project]} #{node[:boinc][:auth]}"
 end
