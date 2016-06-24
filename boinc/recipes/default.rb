@@ -28,3 +28,7 @@ end
 execute 'register with Einstein@Home' do
   command "boinccmd --project_attach #{node[:boinc][:project]} #{node[:boinc][:auth]}"
 end
+
+execute 'CPU load shall not impede GPU compute' do
+  command "boinccmd --set_gpu_mode always"
+end
